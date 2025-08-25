@@ -1,4 +1,6 @@
-/*Estilos base de la landing page*/
+/* ========================================
+   ESTILOS BASE DE LA LANDING PAGE EPSON
+   ======================================== */
 
 * {
   margin: 0;
@@ -27,10 +29,12 @@ body {
   flex-direction: column;
 }
 
-/* H1 oculto para SEO */
-/* Esta sección tiene declaración !Important al ser de vital importancia para el SEO */
+/* ========================================
+   TÍTULO H1 OCULTO PARA SEO
+   ======================================== */
+/* Esta sección tiene declaración !important al ser de vital importancia para el SEO */
 
-.seo-hidden {
+.epson-seo-title {
   position: absolute !important;
   left: -10000px !important;
   top: auto !important;
@@ -41,7 +45,9 @@ body {
   white-space: nowrap !important;
 }
 
-/*Configuración global de Imagenes*/
+/* ========================================
+   CONFIGURACIÓN GLOBAL DE IMÁGENES
+   ======================================== */
 
 img {
   max-width: 100%;
@@ -49,22 +55,28 @@ img {
   display: block;
 }
 
-.main-content {
+/* ========================================
+   CONTENEDOR PRINCIPAL Y WRAPPER
+   ======================================== */
+
+.epson-main-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.container {
+.epson-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
 }
 
-/*Estilos del Navbar*/
+/* ========================================
+   BARRA DE NAVEGACIÓN PRINCIPAL
+   ======================================== */
 
-.navbar {
+.epson-navigation {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,18 +85,15 @@ img {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*
-  Fijar altura y configurar logo de EPSON y centrar contenido del Navbar
-*/
-
-.navbar-top {
+/* Sección superior del navbar - Logo de EPSON */
+.epson-nav-header {
   background-color: rgba(0, 51, 153, 255);
   height: 80px; 
   display: flex;
   align-items: center; 
 }
 
-.logo-container {
+.epson-brand-area {
   text-align: center;
   width: 100%;
   display: flex;
@@ -92,14 +101,15 @@ img {
   align-items: center;
 }
 
-.logo {
+.epson-brand-logo {
   max-height: 175px; 
   width: auto; 
   margin: 0 auto;
   object-fit: contain; 
 }
 
-.navbar-bottom {
+/* Sección inferior del navbar - Enlaces de navegación */
+.epson-nav-menu {
   background-color: #ffffff;
   height: 60px; 
   display: flex;
@@ -107,7 +117,7 @@ img {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.nav-links {
+.epson-menu-list {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -116,7 +126,7 @@ img {
   padding: 0;
 }
 
-.nav-links li a {
+.epson-menu-list li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -126,28 +136,28 @@ img {
   transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
+.epson-menu-list li a:hover {
   color: rgba(0, 51, 153, 255);
   background-color: #f5f5f5;
 }
 
-.nav-links li a.active {
+.epson-menu-list li a.active {
   color: rgba(0, 51, 153, 255);
   background-color: #f0f5ff;
   font-weight: 600;
 }
 
-/*
-  Configuración del Banner de Epson
-*/
+/* ========================================
+   BANNER PRINCIPAL DE EPSON
+   ======================================== */
 
-.banner {
+.epson-hero-banner {
   margin-top: 140px; 
   padding: 40px 0;
   text-align: center;
 }
 
-.banner-image {
+.epson-hero-image {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
@@ -155,16 +165,16 @@ img {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/*
-  Configuración de la sección de productos
-*/
+/* ========================================
+   SECCIONES DE PRODUCTOS
+   ======================================== */
 
-.product-section {
+.epson-product-showcase {
   padding: 80px 0;
   text-align: center;
 }
 
-.section-content {
+.epson-showcase-content {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -172,67 +182,59 @@ img {
   margin: 0 auto;
 }
 
-/* 
-  Layout para Impresoras y Suministros
-  (40% imagen - 60% contenido) 
-*/
-.layout-left .image-column {
+/* Layout estándar (40% imagen - 60% contenido) para Impresoras y Suministros */
+.epson-layout-standard .epson-info-block {
   flex: 0 0 40%;
 }
 
-.layout-left .content-column {
+.epson-layout-standard .epson-content-block {
   flex: 0 0 60%;
 }
 
-/* 
-  Layout para Plotter y Proyectores
-  Right (60% contenido - 40% imagen) 
-*/
-.layout-right .content-column {
+/* Layout invertido (60% contenido - 40% imagen) para Plotter y Proyectores */
+.epson-layout-reverse .epson-content-block {
   flex: 0 0 60%;
 }
 
-.layout-right .image-column {
+.epson-layout-reverse .epson-info-block {
   flex: 0 0 40%;
 }
 
 
-/*
-  Ajuste de las tarjetas de producto 
-  (Imagen, titulo y descripción)
-  (Width 40%)
-*/
+/* ========================================
+   TARJETAS DE PRODUCTOS
+   ======================================== */
 
-.product-card {
+.epson-product-card {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card:hover {
+.epson-product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/*Ajuste de las imagenes*/
-.product-image {
+/* Imágenes de las tarjetas de producto */
+.epson-card-image {
   width: 100%;
   height: auto;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
-/*Ajuste del titulo*/
-.product-title {
+/* Títulos de las tarjetas */
+.epson-card-title {
   font-size: 24px;
   font-weight: 700;
   color: #333;
   margin-bottom: 15px;
 }
 
-/*Ajuste de descripción*/
-.product-description {
+/* Descripción de las tarjetas */
+.epson-card-description {
   background-color: rgba(0, 51, 153, 255);
   color: white;
   padding: 15px;
@@ -241,23 +243,23 @@ img {
   margin: 0;
 }
 
-/*
-  Ajuste de los carruseles
-*/
+/* ========================================
+   TÍTULOS Y CARRUSELES DE PRODUCTOS
+   ======================================== */
 
-.section-title {
+.epson-showcase-title {
   font-size: 48px;
-  font-weight: 70;
+  font-weight: 700;
   color: rgba(0, 51, 153, 255);
   margin-bottom: 40px;
   text-align: center;
 }
 
-.carousel-container {
+.epson-slider-wrapper {
   margin-bottom: 30px;
 }
 
-.carousel-wrapper {
+.epson-slider-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -265,7 +267,7 @@ img {
   margin-bottom: 20px;
 }
 
-.carousel {
+.epson-slider {
   position: relative;
   width: 100%;
   max-width: 400px;
@@ -275,7 +277,7 @@ img {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-item {
+.epson-slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -290,20 +292,20 @@ img {
 }
 
 /* Asegurar que el primer elemento del carrusel sea visible por defecto */
-.carousel-item:first-child,
-.carousel-item.active {
+.epson-slide:first-child,
+.epson-slide.active {
   opacity: 1;
   visibility: visible;
 }
 
-.carousel-item img {
+.epson-slide img {
   width: 100%;
   height: 70%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.carousel-item h3 {
+.epson-slide h3 {
   padding: 15px;
   margin: 0;
   font-size: 16px;
@@ -317,7 +319,11 @@ img {
   justify-content: center;
 }
 
-.carousel-btn {
+/* ========================================
+   BOTONES DEL CARRUSEL
+   ======================================== */
+
+.epson-slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -338,27 +344,31 @@ img {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-btn:hover {
+.epson-slider-btn:hover {
   background-color: rgba(0, 40, 120, 255);
   transform: translateY(-50%) scale(1.1);
 }
 
-.prev-btn {
+.epson-prev-btn {
   left: 40px;
 }
 
-.next-btn {
+.epson-next-btn {
   right: 40px;
 }
 
-.carousel-dots {
+/* ========================================
+   INDICADORES DEL CARRUSEL
+   ======================================== */
+
+.epson-slider-indicators {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
 
-.dot {
+.epson-indicator {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -367,25 +377,27 @@ img {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.dot.active {
+.epson-indicator.active {
   background-color: rgba(0, 51, 153, 255);
   transform: scale(1.2);
 }
 
-.dot:hover {
+.epson-indicator:hover {
   background-color: rgba(0, 51, 153, 0.7);
 }
 
-/* Ajuste de Botones "Ver Más*/
+/* ========================================
+   BOTONES DE ACCIÓN "VER MÁS"
+   ======================================== */
 
-.button-container {
+.epson-action-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
 
-.btn-secondary {
+.epson-secondary-btn {
   background-color: rgba(242, 242, 242, 255);
   color: #000;
   border: none;
@@ -403,7 +415,7 @@ img {
   text-decoration: none;
 }
 
-.btn-secondary:hover {
+.epson-secondary-btn:hover {
   background-color: #e0e0e0;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -411,7 +423,7 @@ img {
   text-decoration: none;
 }
 
-.btn-secondary::after {
+.epson-secondary-btn::after {
   content: '→';
   background-color: rgba(0, 51, 153, 255);
   color: white;
@@ -439,232 +451,214 @@ img {
   transition: all 0.3s ease;
 }
 
-.btn-secondary::before {
+.epson-secondary-btn::before {
   display: none;
 }
 
-.btn-secondary:hover::after {
+.epson-secondary-btn:hover::after {
   background-color: rgba(0, 40, 120, 255);
   transform: scale(1.1);
 }
 
-/* Estilos específicos para enlaces con clase btn-secondary */
-a.btn-secondary {
+/* Estilos específicos para enlaces con clase epson-secondary-btn */
+a.epson-secondary-btn {
   color: #000;
   text-decoration: none;
 }
 
-a.btn-secondary:visited {
+a.epson-secondary-btn:visited {
   color: #000;
 }
 
-a.btn-secondary:focus {
+a.epson-secondary-btn:focus {
   outline: 2px solid rgba(0, 51, 153, 255);
   outline-offset: 2px;
 }
 
-.btn-primary {
-  display: none; /* Ocultamos el botón separado ya que ahora está integrado */
-}
-
-.btn-primary:hover {
-  background-color: rgba(0, 40, 120, 255);
-  transform: translateY(-2px) scale(1.1);
-  box-shadow: 0 6px 20px rgba(0, 51, 153, 0.3);
-}
-
-.btn-primary span {
-  font-weight: bold;
-}
-
-/*Responsive Design*/
+/* ========================================
+   RESPONSIVE DESIGN - DESKTOP MEDIANO
+   ======================================== */
 
 @media (max-width: 992px) {
-  .section-content {
+  .epson-showcase-content {
     flex-direction: column;
     gap: 60px;
   }
   
-  .layout-left .image-column,
-  .layout-left .content-column,
-  .layout-right .content-column,
-  .layout-right .image-column {
+  .epson-layout-standard .epson-info-block,
+  .epson-layout-standard .epson-content-block,
+  .epson-layout-reverse .epson-content-block,
+  .epson-layout-reverse .epson-info-block {
     flex: 1 1 100%;
     max-width: 100%;
   }
   
-  .carousel {
+  .epson-slider {
     max-width: 350px;
     height: 220px;
   }
   
-  .prev-btn {
+  .epson-prev-btn {
     left: 35px;
   }
   
-  .next-btn {
+  .epson-next-btn {
     right: 35px;
   }
   
-  .carousel-btn {
+  .epson-slider-btn {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
   
-  .section-title {
+  .epson-showcase-title {
     font-size: 36px;
   }
 }
 
-/* 
-  Responsive Design - Desktop pequeño/Tablet grande (1024px y menor)
-*/
+/* ========================================
+   RESPONSIVE DESIGN - DESKTOP PEQUEÑO/TABLET GRANDE
+   ======================================== */
 
 @media (max-width: 1024px) {
-  .container {
+  .epson-wrapper {
     padding: 0 30px;
   }
   
-  .section-content {
+  .epson-showcase-content {
     gap: 30px;
   }
   
-  .carousel {
+  .epson-slider {
     max-width: 350px;
     height: 250px;
   }
   
-  .product-card {
+  .epson-product-card {
     padding: 30px;
   }
   
-  .product-image {
+  .epson-card-image {
     height: 200px;
   }
 }
 
-/* 
-  Responsive Design - Tablet (768px y menor)
- */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
 
 @media (max-width: 768px) {
   /* Navbar responsivo */
-  .navbar-top {
+  .epson-nav-header {
     height: 70px;
   }
   
-  .navbar-bottom {
+  .epson-nav-menu {
     height: auto;
     padding: 10px 0;
   }
   
-  .logo {
+  .epson-brand-logo {
     max-height: 50px;
   }
   
-  .nav-links {
+  .epson-menu-list {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .nav-links li a {
+  .epson-menu-list li a {
     font-size: 14px;
     padding: 8px 12px;
   }
   
   /* Banner responsivo */
-  .banner {
+  .epson-hero-banner {
     margin-top: 130px;
     padding: 20px 0;
   }
   
   /* Secciones de productos - Layout responsive */
-  .product-section {
+  .epson-product-showcase {
     padding: 50px 0;
   }
   
-  .section-content {
+  .epson-showcase-content {
     flex-direction: column;
+  .epson-showcase-content {
     gap: 30px;
+    flex-direction: column;
   }
   
-  .layout-left .image-column,
-  .layout-right .image-column {
-    order: 1;
-    width: 100%;
-  }
-  
-  .layout-left .content-column,
-  .layout-right .content-column {
+  .epson-layout-reverse .epson-content-block {
     order: 2;
     width: 100%;
   }
   
-  .section-title {
+  .epson-showcase-title {
     font-size: 28px;
     margin-bottom: 25px;
   }
   
   /* Carrusel responsivo para tablet */
-  .carousel-wrapper {
+  .epson-slider-container {
     position: relative;
     max-width: 400px;
     margin: 0 auto;
   }
   
-  .carousel {
+  .epson-slider {
     max-width: 400px;
     height: 280px;
     margin: 0 auto;
   }
   
-  .carousel-btn {
+  .epson-slider-btn {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
   
-  .prev-btn {
+  .epson-prev-btn {
     left: 10px;
   }
   
-  .next-btn {
+  .epson-next-btn {
     right: 10px;
   }
   
-  .carousel-item h3 {
+  .epson-slide h3 {
     font-size: 16px;
     padding: 12px;
   }
   
   /* Tarjetas de producto */
-  .product-card {
+  .epson-product-card {
     padding: 25px;
   }
   
-  .product-image {
+  .epson-card-image {
     height: 220px;
   }
   
-  .product-title {
+  .epson-card-title {
     font-size: 22px;
   }
   
-  .product-description {
+  .epson-card-description {
     font-size: 15px;
   }
   
   /* Botones responsivos */
-  .button-container {
+  .epson-action-wrapper {
     flex-direction: column;
     gap: 15px;
     align-items: center;
   }
   
-  .btn-primary,
-  .btn-secondary {
+  .epson-secondary-btn {
     width: 100%;
     max-width: 250px;
     padding: 12px 20px;
@@ -672,105 +666,161 @@ a.btn-secondary:focus {
   }
 }
 
-/* 
-  Responsive Design - Tablet pequeño (600px y menor)
-*/
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PEQUEÑO
+   ======================================== */
 
 @media (max-width: 600px) {
-  .container {
+  .epson-wrapper {
     padding: 0 20px;
   }
   
   /* Carrusel optimizado para tablets pequeños */
-  .carousel-wrapper {
+  .epson-slider-container {
     max-width: 320px;
   }
   
-  .carousel {
+  .epson-slider {
     max-width: 320px;
     height: 240px;
   }
   
-  .carousel-btn {
+  .epson-slider-btn {
     width: 35px;
     height: 35px;
     font-size: 18px;
   }
   
-  .prev-btn {
+  .epson-prev-btn {
     left: 5px;
   }
   
-  .next-btn {
+  .epson-next-btn {
     right: 5px;
   }
   
-  /* Hacer los dots más prominentes */
-  .carousel-dots {
+  /* Hacer los indicators más prominentes */
+  .epson-slider-indicators {
     margin-top: 20px;
     padding: 10px 0;
   }
   
-  .dot {
+  .epson-indicator {
     width: 10px;
     height: 10px;
   }
   
-  .section-title {
+  .epson-showcase-title {
     font-size: 26px;
   }
   
-  .product-title {
+  .epson-card-title {
     font-size: 21px;
   }
 }
 
-/* 
-  Responsive Design - Mobile (480px y menor)
-*/
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
 
 @media (max-width: 480px) {
-  .container {
+  .epson-wrapper {
     padding: 0 15px;
   }
   
   /* Navbar mobile */
-  .navbar-top {
+  .epson-nav-header {
     height: 60px;
   }
   
-  .logo {
+  .epson-brand-logo {
     max-height: 40px;
   }
   
-  .nav-links {
+  .epson-menu-list {
     gap: 10px;
   }
   
-  .nav-links li a {
+  .epson-menu-list li a {
     font-size: 13px;
     padding: 6px 10px;
   }
   
   /* Banner mobile */
-  .banner {
+  .epson-hero-banner {
     margin-top: 120px;
   }
   
-  .banner-image {
+  .epson-hero-image {
     border-radius: 8px;
   }
   
-  .product-section {
+  .epson-product-showcase {
     padding: 40px 0;
   }
   
-  .section-title {
+  .epson-showcase-title {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  .product-title {
+  .epson-card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .epson-card-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .epson-slider-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .epson-slider {
+    max-width: 280px;
+    height: 200px;
+    margin: 0 auto 15px auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .epson-slider-btn {
+    display: none;
+  }
+  
+  .epson-slider-indicators {
+    margin-top: 15px;
+    padding: 8px 0;
+  }
+  
+  .epson-indicator {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .epson-product-card {
+    padding: 20px;
+  }
+  
+  .epson-card-image {
+    height: 180px;
+  }
+  
+  .epson-secondary-btn {
+    width: 90%;
+    max-width: 200px;
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+/* ========================================
+   PIE DE PÁGINA (FOOTER)
+   ======================================== */
+
+.product-title {
     font-size: 20px;
     margin-bottom: 10px;
   }
@@ -910,49 +960,49 @@ a.btn-secondary:focus {
     align-items: center;
   }
   
-  .copyright a {
+  .epson-copyright a {
     margin: 0 5px;
   }
   
-  .separator {
+  .epson-separator {
     display: none;
   }
 }
 
-/*Ajustes adicionales de diseño*/
+/* ========================================
+   UTILIDADES ADICIONALES
+   ======================================== */
 
-.text-center {
+.epson-text-center {
   text-align: center;
 }
 
-.mb-20 {
+.epson-mb-20 {
   margin-bottom: 20px;
 }
 
-.mb-30 {
+.epson-mb-30 {
   margin-bottom: 30px;
 }
 
-.mt-20 {
+.epson-mt-20 {
   margin-top: 20px;
 }
 
-.mt-30 {
+.epson-mt-30 {
   margin-top: 30px;
 }
-
 
 img {
   vertical-align: middle;
 }
 
-
-.hidden,
+.epson-hidden,
 [hidden] {
   display: none !important;
 }
 
-.visually-hidden {
+.epson-visually-hidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -964,8 +1014,8 @@ img {
   width: 1px;
 }
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
+.epson-visually-hidden.focusable:active,
+.epson-visually-hidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -976,29 +1026,31 @@ img {
 }
 
 
-/*Footer*/
+/* ========================================
+   PIE DE PÁGINA (FOOTER)
+   ======================================== */
 
-.footer {
+.epson-footer {
   background-color: rgba(242, 246, 246, 255);
   padding: 60px 0 0 0;
   margin-top: auto;
   margin-bottom: 0;
 }
 
-.footer-grid {
+.epson-footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
   gap: 40px;
   margin-bottom: 40px;
 }
 
-.footer-column {
+.epson-footer-section {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.footer-title {
+.epson-footer-heading {
   color: rgba(1, 2, 2, 255);
   font-size: 18px;
   font-weight: 600;
@@ -1006,17 +1058,17 @@ img {
   font-family: 'Roboto', sans-serif;
 }
 
-.footer-links {
+.epson-footer-menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-links li {
+.epson-footer-menu li {
   margin-bottom: 12px;
 }
 
-.footer-links a {
+.epson-footer-menu a {
   color: #666;
   text-decoration: none;
   font-size: 14px;
@@ -1024,18 +1076,18 @@ img {
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.epson-footer-menu a:hover {
   color: rgba(0, 51, 153, 255);
 }
 
-.social-links {
+.epson-social-links {
   display: flex;
   flex-wrap: nowrap;
   gap: 40px;
   justify-content: flex-start;
 }
 
-.social-link {
+.epson-social-link {
   display: block;
   width: 45px;
   height: 45px;
@@ -1044,11 +1096,11 @@ img {
   overflow: hidden;
 }
 
-.social-link:hover {
+.epson-social-link:hover {
   transform: scale(1.1);
 }
 
-.social-icon {
+.epson-social-icon {
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -1057,7 +1109,7 @@ img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
-.footer-bottom {
+.epson-footer-legal {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1069,14 +1121,14 @@ img {
   margin-bottom: 0;
 }
 
-.copyright {
+.epson-copyright {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
 
-.copyright p {
+.epson-copyright p {
   color: #666;
   font-size: 14px;
   margin: 0;
@@ -1084,8 +1136,7 @@ img {
   display: inline;
 }
 
-
-.copyright a {
+.epson-copyright a {
   color: #666;
   text-decoration: none;
   font-size: 14px;
@@ -1095,67 +1146,66 @@ img {
   margin: 0 8px;
 }
 
-.copyright a:hover {
+.epson-copyright a:hover {
   color: rgba(0, 51, 153, 255);
 }
 
-.separator {
+.epson-separator {
   color: #ccc;
 }
 
-/* Responsive Footer */
+/* ========================================
+   RESPONSIVE FOOTER
+   ======================================== */
+
 @media (max-width: 992px) {
-  .footer-grid {
+  .epson-footer-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .footer {
+  .epson-footer {
     padding: 40px 0 0 0;
     margin-top: 60px;
   }
   
-  .footer-grid {
+  .epson-footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     margin-bottom: 30px;
   }
   
-  .footer-bottom {
+  .epson-footer-legal {
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
     padding: 20px 0 0 0;
   }
   
-  .legal-links {
-    justify-content: flex-start;
-  }
-  
-  .social-links {
+  .epson-social-links {
     flex-wrap: wrap;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-grid {
+  .epson-footer-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .social-links {
+  .epson-social-links {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 }
 
-/* 
-  Botón de Soporte Flotante
-*/
+/* ========================================
+   BOTÓN DE SOPORTE FLOTANTE
+   ======================================== */
 
-.support-button {
+.epson-support-btn {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1172,19 +1222,19 @@ img {
   font-weight: 500;
 }
 
-.support-button:hover {
+.epson-support-btn:hover {
   background-color: rgba(0, 51, 153, 0.9);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.support-button-content {
+.epson-support-content {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.support-icon {
+.epson-support-icon {
   width: 20px;
   height: 20px;
   background-color: white;
@@ -1197,12 +1247,16 @@ img {
   font-size: 14px;
 }
 
-.support-text {
+.epson-support-text {
   font-size: 14px;
   white-space: nowrap;
 }
 
-.support-modal {
+/* ========================================
+   MODAL DE SOPORTE
+   ======================================== */
+
+.epson-support-modal {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1216,7 +1270,7 @@ img {
   animation: slideUp 0.3s ease-out;
 }
 
-.support-modal.active {
+.epson-support-modal.active {
   display: block;
 }
 
@@ -1231,7 +1285,7 @@ img {
   }
 }
 
-.support-modal-header {
+.epson-support-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1241,7 +1295,7 @@ img {
   border-radius: 15px 15px 0 0;
 }
 
-.support-modal-header h3 {
+.epson-support-header h3 {
   margin: 0;
   color: white;
   font-size: 18px;
@@ -1250,7 +1304,7 @@ img {
   flex: 1;
 }
 
-.close-support-btn {
+.epson-close-btn {
   background: none;
   border: none;
   font-size: 24px;
@@ -1266,19 +1320,23 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.close-support-btn:hover {
+.epson-close-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.support-form {
+/* ========================================
+   FORMULARIO DE SOPORTE
+   ======================================== */
+
+.epson-support-form {
   padding: 20px 25px 25px;
 }
 
-.form-group {
+.epson-form-field {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.epson-form-field label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
@@ -1286,15 +1344,15 @@ img {
   font-size: 14px;
 }
 
-.form-group:has(.file-input) label,
-.file-label {
+.epson-form-field:has(.epson-file-input) label,
+.epson-file-label {
   text-align: center;
   font-weight: 600;
   color: rgba(0, 51, 153, 1);
 }
 
-.form-group input,
-.form-group textarea {
+.epson-form-field input,
+.epson-form-field textarea {
   width: 100%;
   padding: 12px;
   border: 2px solid #e1e1e1;
@@ -1305,22 +1363,22 @@ img {
   box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.epson-form-field input:focus,
+.epson-form-field textarea:focus {
   outline: none;
   border-color: rgba(0, 51, 153, 1);
 }
 
-.form-group textarea {
+.epson-form-field textarea {
   resize: vertical;
   min-height: 80px;
 }
 
-.file-upload-container {
+.epson-file-upload {
   position: relative;
 }
 
-.file-input {
+.epson-file-input {
   padding: 20px !important;
   cursor: pointer;
   text-align: center;
@@ -1330,22 +1388,22 @@ img {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.file-input:hover {
+.epson-file-input:hover {
   border-color: rgba(0, 51, 153, 1) !important;
   background-color: #f0f4ff;
 }
 
-.file-input:focus {
+.epson-file-input:focus {
   border-color: rgba(0, 51, 153, 1) !important;
   outline: none;
   background-color: #f0f4ff;
 }
 
-.file-list {
+.epson-file-list {
   margin-top: 10px;
 }
 
-.file-item {
+.epson-file-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1356,11 +1414,11 @@ img {
   font-size: 13px;
 }
 
-.file-item:last-child {
+.epson-file-item:last-child {
   margin-bottom: 0;
 }
 
-.file-name {
+.epson-file-name {
   color: #333;
   flex: 1;
   overflow: hidden;
@@ -1368,7 +1426,7 @@ img {
   white-space: nowrap;
 }
 
-.file-remove {
+.epson-file-remove {
   background: none;
   border: none;
   color: #dc3545;
@@ -1377,17 +1435,17 @@ img {
   padding: 0 5px;
 }
 
-.file-remove:hover {
+.epson-file-remove:hover {
   color: #c82333;
 }
 
-.form-actions {
+.epson-form-actions {
   display: flex;
   justify-content: flex-end;
   margin-top: 25px;
 }
 
-.submit-btn {
+.epson-submit-btn {
   background-color: rgba(0, 51, 153, 1);
   color: white;
   border: none;
@@ -1400,43 +1458,46 @@ img {
   font-family: 'Roboto', sans-serif;
 }
 
-.submit-btn:hover {
+.epson-submit-btn:hover {
   background-color: rgba(0, 51, 153, 0.9);
 }
 
-.submit-btn:disabled {
+.epson-submit-btn:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-/* Responsive para el botón de soporte */
+/* ========================================
+   RESPONSIVE PARA EL BOTÓN DE SOPORTE
+   ======================================== */
+
 @media (max-width: 768px) {
-  .support-modal {
+  .epson-support-modal {
     width: calc(100vw - 40px);
     right: 20px;
     bottom: 20px;
   }
   
-  .support-button {
+  .epson-support-btn {
     bottom: 20px;
     right: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .support-modal {
+  .epson-support-modal {
     width: calc(100vw - 20px);
     right: 10px;
     bottom: 10px;
   }
   
-  .support-button {
+  .epson-support-btn {
     bottom: 15px;
     right: 15px;
     padding: 12px 16px;
   }
   
-  .support-text {
+  .epson-support-text {
     font-size: 13px;
   }
 }

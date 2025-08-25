@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Smooth scrolling para los enlaces del navbar
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    // ========================================
+    // NAVEGACIÓN SUAVE PARA LOS ENLACES DEL NAVBAR
+    // ========================================
+    const navLinks = document.querySelectorAll('.epson-menu-list a[href^="#"]');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const navbarHeight = document.querySelector('.epson-navigation').offsetHeight;
                 const targetPosition = targetSection.offsetTop - navbarHeight - 20;
                 
                 window.scrollTo({
@@ -22,10 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    /*Animación de enlace activo en Navbar*/
+    // ========================================
+    // ANIMACIÓN DE ENLACE ACTIVO EN NAVBAR
+    // ========================================
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        const sections = document.querySelectorAll('.product-section');
+        const navbar = document.querySelector('.epson-navigation');
+        const sections = document.querySelectorAll('.epson-product-showcase');
         const navbarHeight = navbar.offsetHeight;
         let current = '';
         
@@ -46,13 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-   /*Configuración de carrusel para mostrar 1 imagen a la vez */
-    document.querySelectorAll('.carousel-container').forEach(container => {
-        const carousel = container.querySelector('.carousel');
-        const items = carousel.querySelectorAll('.carousel-item');
-        const prevBtn = container.querySelector('.prev-btn');
-        const nextBtn = container.querySelector('.next-btn');
-        const dots = container.querySelectorAll('.dot');
+    // ========================================
+    // CONFIGURACIÓN DE CARRUSEL PARA MOSTRAR 1 IMAGEN A LA VEZ
+    // ========================================
+    document.querySelectorAll('.epson-slider-wrapper').forEach(container => {
+        const carousel = container.querySelector('.epson-slider');
+        const items = carousel.querySelectorAll('.epson-slide');
+        const prevBtn = container.querySelector('.epson-prev-btn');
+        const nextBtn = container.querySelector('.epson-next-btn');
+        const dots = container.querySelectorAll('.epson-indicator');
         
         let currentIndex = 0;
         const totalItems = items.length;
@@ -66,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Mostrar el item actual
             items[index].classList.add('active');
             
-            // Actualizar dots
+            // Actualizar indicadores
             dots.forEach((dot, dotIndex) => {
                 dot.classList.toggle('active', dotIndex === index);
             });
@@ -89,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.addEventListener('click', nextSlide);
         prevBtn.addEventListener('click', prevSlide);
         
-        // Event listeners para dots
+        // Event listeners para indicadores
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 showSlide(index);
@@ -99,13 +105,14 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(0);
     });
     
-    /*Configuración de botones "Ver Más" y "Flecha" */
-    const verMasButtons = document.querySelectorAll('.btn-secondary:not([href])');
-    const arrowButtons = document.querySelectorAll('.btn-primary');
+    // ========================================
+    // CONFIGURACIÓN DE BOTONES "VER MÁS"
+    // ========================================
+    const verMasButtons = document.querySelectorAll('.epson-secondary-btn:not([href])');
     
     verMasButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
-            const section = this.closest('.product-section');
+            const section = this.closest('.epson-product-showcase');
             const sectionId = section.getAttribute('id');
             
             console.log(`Ver más productos de: ${sectionId}`);
@@ -113,28 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    arrowButtons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-            const section = this.closest('.product-section');
-            const sectionId = section.getAttribute('id');
-            
-            // Lógica para el botón de flecha (puede ser igual o diferente)
-            console.log(`Acción de flecha para: ${sectionId}`);
-            
-            // Ejemplo: scroll a la siguiente sección
-            const nextSection = section.nextElementSibling;
-            if (nextSection && nextSection.classList.contains('product-section')) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = nextSection.offsetTop - navbarHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
+    // ========================================
+    // OBSERVER PARA ANIMACIONES DE ENTRADA
+    // ========================================
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -149,8 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    /*Configuración para cargar todo el contenido de la landing al abrirla*/
-    const productSections = document.querySelectorAll('.product-section');
+    // ========================================
+    // CONFIGURACIÓN PARA CARGAR TODO EL CONTENIDO DE LA LANDING
+    // ========================================
+    const productSections = document.querySelectorAll('.epson-product-showcase');
     productSections.forEach((section, index) => {
         if (index === 0) {
             section.style.opacity = '1';
@@ -163,7 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
     
-    const carouselItems = document.querySelectorAll('.carousel-item');
+    // ========================================
+    // EFECTOS HOVER PARA ITEMS DEL CARRUSEL
+    // ========================================
+    const carouselItems = document.querySelectorAll('.epson-slide');
     
     carouselItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
@@ -177,20 +170,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-// Función para manejar el redimensionamiento de la ventana
+// ========================================
+// FUNCIÓN PARA MANEJAR EL REDIMENSIONAMIENTO DE LA VENTANA
+// ========================================
 window.addEventListener('resize', function() {
     // Aquí puedes agregar lógica específica para el responsive
     console.log('Ventana redimensionada');
 });
 
+// ========================================
+// FUNCIÓN PARA PRECARGAR IMÁGENES
+// ========================================
 function preloadImages() {
     const images = [
-        'img/epson-logo.png',
-        'img/banner-epson.jpg',
-        'img/impresora-destacada.jpg',
-        'img/plotter-destacado.jpg',
-        'img/suministro-destacado.jpg',
-        'img/proyector-destacado.jpg'
+        'img/Logo-Epson.png',
+        'img/Banner-Epson.jpg',
+        'img/Impresora_PictureMate525.png',
+        'img/Plotter_SureColor-P9570.jpg',
+        'img/Tinta-L200.jpg',
+        'img/Proyector-PowerLite118.jpg'
     ];
     
     images.forEach(src => {
@@ -202,7 +200,9 @@ function preloadImages() {
 // Llamar a la precarga cuando se carga la página
 window.addEventListener('load', preloadImages);
 
-/*Configuración del botón de soporte */
+// ========================================
+// CONFIGURACIÓN DEL BOTÓN DE SOPORTE
+// ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     const supportButton = document.getElementById('supportButton');
@@ -265,18 +265,18 @@ document.addEventListener('DOMContentLoaded', function() {
         
         selectedFiles.forEach((file, index) => {
             const fileItem = document.createElement('div');
-            fileItem.className = 'file-item';
+            fileItem.className = 'epson-file-item';
             
             fileItem.innerHTML = `
-                <span class="file-name">${file.name}</span>
-                <button type="button" class="file-remove" data-index="${index}">×</button>
+                <span class="epson-file-name">${file.name}</span>
+                <button type="button" class="epson-file-remove" data-index="${index}">×</button>
             `;
             
             fileList.appendChild(fileItem);
         });
         
         // Agregar event listeners para los botones de eliminación
-        const removeButtons = fileList.querySelectorAll('.file-remove');
+        const removeButtons = fileList.querySelectorAll('.epson-file-remove');
         removeButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const index = parseInt(this.getAttribute('data-index'));
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
             formData.append(`file_${index}`, file);
         });
         
-        const submitBtn = document.querySelector('.submit-btn');
+        const submitBtn = document.querySelector('.epson-submit-btn');
         const originalText = submitBtn.textContent;
         
         submitBtn.disabled = true;
@@ -337,11 +337,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/*FUNCIONALIDAD TÁCTIL PARA CARRUSELES (SWIPE EN MOBILE) */
+// ========================================
+// FUNCIONALIDAD TÁCTIL PARA CARRUSELES (SWIPE EN MOBILE)
+// ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     // Agregar funcionalidad táctil a todos los carruseles
-    const carousels = document.querySelectorAll('.carousel');
+    const carousels = document.querySelectorAll('.epson-slider');
     
     carousels.forEach(carousel => {
         let startX = 0;
@@ -382,9 +384,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Verificar que sea un swipe horizontal válido
             if (Math.abs(horizontalDistance) > minSwipeDistance && verticalDistance < maxVerticalDistance) {
-                const carouselContainer = carousel.closest('.carousel-container');
-                const nextBtn = carouselContainer.querySelector('.next-btn');
-                const prevBtn = carouselContainer.querySelector('.prev-btn');
+                const carouselContainer = carousel.closest('.epson-slider-wrapper');
+                const nextBtn = carouselContainer.querySelector('.epson-next-btn');
+                const prevBtn = carouselContainer.querySelector('.epson-prev-btn');
                 
                 if (horizontalDistance > 0) {
                     // Swipe left (mostrar siguiente)
@@ -398,11 +400,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/*Mejoras de UX y Accesibilidad */
+// ========================================
+// MEJORAS DE UX Y ACCESIBILIDAD
+// ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mejorar navegación por teclado en carruseles
-    const carouselItems = document.querySelectorAll('.carousel-item');
+    const carouselItems = document.querySelectorAll('.epson-slide');
     
     carouselItems.forEach(item => {
         item.setAttribute('tabindex', '0');
@@ -418,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Pausa automática del carrusel al hacer hover o focus (si hay autoplay)
-    const carouselContainers = document.querySelectorAll('.carousel-container');
+    const carouselContainers = document.querySelectorAll('.epson-slider-wrapper');
     
     carouselContainers.forEach(container => {
         container.addEventListener('mouseenter', function() {
